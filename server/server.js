@@ -14,13 +14,18 @@ app.use(express.static(publicPath));
 io.on('connect', (socket)=>{
     console.log('New user connected');
     
+    socket.emit('newMessage',{
+        from:'ankitdwivedi.cs@yahoo.com',
+        text: 'Hey there, Hou are you.!!',
+        createdAt: 123
+    });
+    socket.on('createMessgae',(newMessage)=>{
+        console.log('New Email created', newMessage);
+    })
     socket.on('disconnect', (socket)=>{
-        console.log('Disconnect from server');
-        
+        console.log('Disconnect from server');  
     })
 })
-
 server.listen(3000,()=>{
     console.log(`Server is start on port ${port}`);  
 })
-
