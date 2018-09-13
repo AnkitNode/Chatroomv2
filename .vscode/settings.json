@@ -1,0 +1,7 @@
+{
+    "editor.fontSize": 13,
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
+    "editor.cursorStyle": "underline",
+    "editor.wordWrap": "on"
+}
